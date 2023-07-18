@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: repeat(auto-fill, max-content);
-    gap: 1.5rem;
+    gap: 3rem;
 
     @include response(s-desktop){
         padding: 10rem;
@@ -100,8 +100,8 @@
         align-self: center;
     }
     .squareBox{
-        height: 2rem;
-        width: 2rem;
+        height: 1.5rem;
+        width: 1.5rem;
         background-color: $color-secondary;
 
         @include response(phone){

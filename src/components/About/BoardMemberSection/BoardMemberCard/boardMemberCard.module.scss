@@ -2,13 +2,14 @@
 
 .boardMemberCard{
     width: max-content;
-    border-radius: 0 10rem 0 0;
     overflow: hidden;
-
+    
     .imageContainer{
         max-width: 35rem;
+        border-radius: 0 10rem 0 0;
         height: 30rem;
         margin-bottom: 1.5rem;
+        overflow: hidden;
         
         .img{
             width: 100%;
@@ -32,4 +33,14 @@
     .designation{
         font-size: 1.6rem;
     }
+}
+
+.cardStyleOne{
+    border-radius: 10rem 0 0 0 !important;
+}
+.cardStyleTwo{
+    border-radius: 1rem !important;
+}
+.cardStyleThree{
+    border-radius: 0 0 10rem 0 !important;
 }

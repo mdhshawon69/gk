@@ -1,6 +1,7 @@
 import React from 'react';
 
 import boardMembersData from '@/assets/data/boardMembers';
+import { handleMiddleIndex } from './boardMemberSection.helpers';
 
 import BoardMemberCard from './BoardMemberCard/BoardMemberCard';
 import HorizontalLayout from './HorizontalLayout/HorizontalLayout';
@@ -17,6 +18,10 @@ const {
 const BoardMemberSection = () => {
   const chairman = boardMembersData.filter(data => data.designation === 'Chairman');
   const boardMembers = boardMembersData.filter(data => data.designation !== 'Chairman');
+  const middleDataOne = handleMiddleIndex(boardMembers, 1);
+  const middleDataTwo = handleMiddleIndex(boardMembers, 2);
+  const firstData = handleMiddleIndex(boardMembers, 0);
+  const lastData = handleMiddleIndex(boardMembers, 3);
   let counter = 0;
 
   return (
@@ -48,10 +53,25 @@ const BoardMemberSection = () => {
               counterArray.push(counter);
             }
 
+            const isFirstData = firstData.some(firstData => firstData?.id === data.id);
+            const isMiddleDataOne = middleDataOne.some(middileData => middileData?.id === data.id);
+            const isMiddleDataTwo = middleDataTwo.some(middileData => middileData?.id === data.id);
+            const isLastData = lastData.some(lastData => lastData?.id === data.id);
+
             return (
               <>
                 <div className={cardContainer}>
-                  <BoardMemberCard data={data}/>
+                  {
+                    isMiddleDataOne
+                      ? <BoardMemberCard data={data} typeTwo={true}/>
+                      : isMiddleDataTwo
+                        ? <BoardMemberCard data={data} typeTwo={true}/>
+                        : isFirstData
+                          ? <BoardMemberCard data={data} typeOne={true}/>
+                          : isLastData
+                            ? <BoardMemberCard data={data} typeThree={true}/>
+                            : <BoardMemberCard data={data}/>
+                  }
                 </div>
                 {
                   counterArray.map(counter => {

@@ -9,7 +9,9 @@ import {
   AchievementSection,
   BoardMemberSection
 } from '@/components/About';
-import { HeroSection, ServiceSection, AnnualReportSection } from '@/shared/components';
+import {
+  HeroSection, ServiceSection, AnnualReportSection, WorkTogether
+} from '@/shared/components';
 
 const page = () => {
   return (
@@ -24,6 +26,7 @@ const page = () => {
       <AboutGrameenKalyan/>
       <AchievementSection/>
       <BoardMemberSection/>
+      <WorkTogether/>
     </>
   );
 };

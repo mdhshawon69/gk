@@ -43,6 +43,13 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
+        
+        @include response(s-desktop){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include response(phone){
+            grid-template-columns: 1fr;
+        }
 
         .cardContainer{
             justify-self: center;

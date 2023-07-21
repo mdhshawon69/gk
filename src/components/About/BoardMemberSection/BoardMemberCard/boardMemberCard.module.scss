@@ -37,10 +37,18 @@
 
 .cardStyleOne{
     border-radius: 10rem 0 0 0 !important;
+
+    @include response(phone){
+        border-radius: 1rem !important;
+    }
 }
 .cardStyleTwo{
     border-radius: 1rem !important;
 }
 .cardStyleThree{
     border-radius: 0 0 10rem 0 !important;
+    
+    @include response(phone){
+        border-radius: 1rem !important;
+    }
 }

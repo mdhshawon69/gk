@@ -31,10 +31,10 @@ const BoardMemberSection = () => {
         chairman.map(data => {
           return (
             <>
-              <div className={cardContainer}>
+              <div key={data.id} className={cardContainer}>
                 <BoardMemberCard data={data}/>
               </div>
-              <HorizontalLayout/>
+              <HorizontalLayout key={data.id}/>
             </>
           );
         })

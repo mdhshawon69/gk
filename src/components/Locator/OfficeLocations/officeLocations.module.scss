@@ -1,0 +1,81 @@
+@import '../../../style/utils/base';
+
+.mainContainer {
+  position: relative;
+}
+
+.officeLocationContainer {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5% 10%;
+
+  @include response(phone) {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: calc(max(5vw, 32px));
+    line-height: 1.2;
+    font-weight: 900;
+    color: #0b612d;
+    margin-bottom: 5rem;
+  }
+
+  .layoutContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include response(phone) {
+      display: none;
+    }
+  }
+
+  .locationContainer {
+    background: #0b612d;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 8% 5%;
+
+    @include response(phone) {
+      grid-template-columns: 1fr;
+    }
+
+    .locationCard {
+      height: 37rem;
+      padding: 1rem 3rem;
+      background-color: #95c11f;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-size: 3.2rem;
+        color: #fff;
+        margin-bottom: 5%;
+      }
+
+      p {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+
+    .cardOne {
+      border-top-left-radius: 10rem;
+      text-align: right;
+
+      @include response(phone) {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10rem;
+      }
+    }
+
+    .cardTwo {
+      border-bottom-right-radius: 10rem;
+      text-align: left;
+    }
+  }
+}

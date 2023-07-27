@@ -2,29 +2,33 @@
 
 *,
 *::before,
-*::after{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-html{
+html {
   box-sizing: border-box;
   font-size: 62.5%;
 
-  @include response(lg-desktop){
+  @include response(lg-desktop) {
     font-size: 55%;
   }
-  @include response(M-desktop){
+  @include response(M-desktop) {
     font-size: 50%;
   }
-  @include response(desktop){
+  @include response(desktop) {
     font-size: 47%;
   }
 }
 
-body{
+body {
   font-family: 'Graphik';
   font-weight: 300;
   line-height: 1.6;
+}
+
+.PhotoView-Portal {
+  z-index: 9999 !important;
 }

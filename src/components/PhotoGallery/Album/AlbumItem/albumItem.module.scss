@@ -1,0 +1,49 @@
+@import '../../../../style/utils/base';
+
+.albumItem {
+  background: #09612e;
+  padding-bottom: 8rem;
+  border-radius: 0.25rem 0.25rem 30px 30px !important;
+  overflow: hidden;
+  border: 1px solid #09612e;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    font-weight: 400;
+
+    .textContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        height: fit-content;
+        padding-top: 2rem;
+        font-size: 1.8rem;
+
+        @media screen and (max-width: 1280px) {
+          padding: 1rem 3rem;
+          line-height: 1.2;
+        }
+
+        @include response(phone) {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+
+  img {
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

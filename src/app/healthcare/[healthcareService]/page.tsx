@@ -10,14 +10,16 @@ const ServiceDetails = async ({ params }: { params: { healthcareService: string 
 
   const services = await useFetch({ url: '/healthcare-services' });
 
-  const detailData = services.data.find((data: IHealthcareService) => (data.id === id));
+  const detailData = services && services.data.find((data: IHealthcareService) => (data.id === id));
 
   const heroSectionData = {
-    title: detailData.title,
-    SubTitle: detailData.sub_title,
-    image: detailData.banner_image
+    title: detailData?.title,
+    SubTitle: detailData?.sub_title,
+    image: detailData?.banner_image
   };
-  const serviceDescription = detailData.description;
+  const serviceDescription = detailData && detailData.description;
+
+  console.log('serviceDescription: ', serviceDescription);
 
   return (
     <>

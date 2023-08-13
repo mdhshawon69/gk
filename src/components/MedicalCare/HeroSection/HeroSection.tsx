@@ -23,7 +23,7 @@ const HeroSection = ({ data }: IHeroSectionProps) => {
   const [isSame, setIsSame] = useState(false);
 
   const handleCheck = () => {
-    if (data.SubTitle === '/') {
+    if (data?.SubTitle === '/') {
       setIsSame(true);
     }
   };
@@ -36,11 +36,11 @@ const HeroSection = ({ data }: IHeroSectionProps) => {
 
     <div className={serviceDetail}>
       <div className={bgImageContainer}>
-        <Image className={bgImage} src={IMAGE_BASE_URL + data.image} alt='bg img' height={100} width={100} loader={() => IMAGE_BASE_URL + data.image}/>
+        <Image className={bgImage} src={IMAGE_BASE_URL + (data && data.image)} alt='bg img' height={100} width={100} loader={() => IMAGE_BASE_URL + (data && data.image)}/>
       </div>
       <h1 className={heading}>
-        <span>{data.title}</span>
-        {!isSame ? <span>{data.SubTitle}</span> : null}
+        <span>{data && data.title}</span>
+        {!isSame ? <span>{data && data.SubTitle}</span> : null}
       </h1>
     </div>
   );

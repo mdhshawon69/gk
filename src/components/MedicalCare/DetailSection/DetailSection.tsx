@@ -19,10 +19,10 @@ interface IDetailSectionProps{
 const DetailSection = ({ detail, image }: IDetailSectionProps) => {
   return (
     <div className={detailSection}>
-      <div className={contentContainer} dangerouslySetInnerHTML={{ __html: detail }}>
+      <div className={contentContainer} dangerouslySetInnerHTML={{ __html: detail && detail }}>
       </div>
       <div className={imgContainer}>
-        <Image className={img} src={IMAGE_BASE_URL + image} alt='img' width={100} height={100} loader={() => IMAGE_BASE_URL + image}/>
+        <Image className={img} src={IMAGE_BASE_URL + (image && image)} alt='img' width={100} height={100} loader={() => IMAGE_BASE_URL + image}/>
       </div>
       <div className={btnContainer}>
         <Button text='Back' url='/healthcare' btnSecondary/>

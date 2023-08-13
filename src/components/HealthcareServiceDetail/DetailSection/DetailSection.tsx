@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import style from './detailSection.module.scss';
@@ -12,8 +14,7 @@ interface IDetailSectionProps{
 const DetailSection = ({ detail }: IDetailSectionProps) => {
   return (
     <div className={detailSection}>
-      <div className={contentContainer} dangerouslySetInnerHTML={{ __html: detail }}>
-      </div>
+      <div className={contentContainer} dangerouslySetInnerHTML={{ __html: detail }}/>
       <div className={btnContainer}>
         <Button text='Back' url='/healthcare' btnSecondary/>
       </div>

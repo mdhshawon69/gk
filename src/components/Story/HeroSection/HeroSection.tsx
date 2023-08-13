@@ -20,10 +20,10 @@ const HeroSection = ({ data }: IHeroSectionProps) => {
   return (
     <div className={heroSection}>
       <div className={imageContainer}>
-        <Image className={img} src={IMAGE_BASE_URL + data.image} alt='bg img' width={100} height={100} loader={() => IMAGE_BASE_URL + data.image}/>
+        <Image className={img} src={IMAGE_BASE_URL + (data && data.image)} alt='bg img' width={100} height={100} loader={() => IMAGE_BASE_URL + (data && data.image)}/>
       </div>
       <div className={content}>
-        <h1 className={heading}>{data.title}</h1>
+        <h1 className={heading}>{data && data.title}</h1>
       </div>
     </div>
   );

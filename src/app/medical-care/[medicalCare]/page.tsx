@@ -9,15 +9,15 @@ const MedicalCare = async ({ params }: { params: { medicalCare: string } }) => {
 
   const services = await useFetch({ url: '/disease-specific-medicare' });
 
-  const detailData = services.data.find((data: IMedicalCare) => (data.id === id));
+  const detailData = services && services.data.find((data: IMedicalCare) => (data.id === id));
 
   const heroSectionData = {
-    title: detailData.title,
-    SubTitle: detailData.sub_title,
-    image: detailData.banner_image
+    title: detailData?.title,
+    SubTitle: detailData?.sub_title,
+    image: detailData?.banner_image
   };
-  const medicalCareDescription = detailData.description;
-  const medicalCareImage = detailData.body_image;
+  const medicalCareDescription = detailData?.description;
+  const medicalCareImage = detailData?.body_image;
 
   return (
     <>

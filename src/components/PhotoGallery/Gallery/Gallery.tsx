@@ -19,9 +19,9 @@ const Gallery = ({ data }: IGalleryProps) => {
   return (
     <PhotoProvider>
       <div className={galleryContainer}>
-        <h2>{data[0].album_title}</h2>
+        <h2>{data && data[0].album_title}</h2>
         <div className={galleryGrid}>
-          {data.map(item => (
+          {data && data.map(item => (
             <div key={item.id}>
               <PhotoCard data={item}/>
             </div>

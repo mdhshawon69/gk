@@ -11,7 +11,7 @@ const Healthcare = async () => {
   const healthcareService = await useFetch({ url: '/healthcare-services' });
   const medicalCare = await useFetch({ url: '/disease-specific-medicare' });
 
-  const medicalCareCategoryData = medicalCare.data.map((data: IMedicalCare) => ({
+  const medicalCareCategoryData = medicalCare && medicalCare.data.map((data: IMedicalCare) => ({
     id: data.id, name: data.title, banner_image: data.thumb_image, dataType: 'medical'
   }));
 

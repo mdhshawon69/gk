@@ -45,7 +45,7 @@ const HeroSection = ({ badgeImage, sliderImages }: IHeroSectionProps) => {
         <Image className={img} src={layoutImage} alt='layout'/>
       </div>
       <div className={glory}>
-        <Image className={img} src={IMAGE_BASE_URL + badgeImage} alt='glory' width={100} height={100} loader={() => IMAGE_BASE_URL + badgeImage}/>
+        <img className={img} src={IMAGE_BASE_URL + badgeImage} alt='glory'/>
       </div>
       <div className={contentContainer}>
         <div className={emptyBox}></div>

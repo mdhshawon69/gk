@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { HeroSection, DetailSection, CommentSection } from '@/components/StoryDetails';
@@ -12,15 +14,15 @@ const StoryDetails = async ({ params }: { params: { storyDetails: number } }) =>
   const stories = await useFetch({ url: '/stories', revalidateIn: 86400 });
 
   const heroSectionData = {
-    title: story.data[0].title,
-    subtitle: story.data[0].sub_title,
-    image: story.data[0].banner_image
+    title: story && story.data[0].title,
+    subtitle: story && story.data[0].sub_title,
+    image: story && story.data[0].banner_image
   };
   const detailData = {
-    id: story.data[0].id,
-    description: story.data[0].desc
+    id: story && story.data[0].id,
+    description: story && story.data[0].desc
   };
-  const recentPostData = stories.data.slice((data: IStories) => data.id === id);
+  const recentPostData = stories && stories.data.slice((data: IStories) => data.id === id);
 
   return (
     <>

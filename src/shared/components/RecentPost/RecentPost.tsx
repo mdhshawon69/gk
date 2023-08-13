@@ -35,7 +35,7 @@ const RecentPost = ({ data }: IRecentPostProps) => {
         autoplaySpeed={3000}
       >
         {
-          data?.map(data => <RecentPostCard key={data.id} data={data}/>)
+          data && data.map(data => <RecentPostCard key={data.id} data={data}/>)
         }
       </Sliders>
     </div>

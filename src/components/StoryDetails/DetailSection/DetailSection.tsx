@@ -11,11 +11,13 @@ interface IDetailSectionProps{
 }
 
 const DetailSection = ({ data }: IDetailSectionProps) => {
+  const description = { __html: data.description };
+
   return (
     <div className={detailSection}>
-      <div className={contentContainer} dangerouslySetInnerHTML={{ __html: data.description }}></div>
+      <div className={contentContainer} dangerouslySetInnerHTML={description}></div>
       <div className={btnContainer}>
-        <Button text='Back' url={`/stories/${data.id}`} btnSecondary/>
+        <Button text='Back' url={`/stories/${data && data.id}`} btnSecondary/>
       </div>
     </div>
   );

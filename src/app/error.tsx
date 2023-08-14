@@ -17,13 +17,7 @@ const Error = ({
   }, [error]);
 
   return (
-<<<<<<< HEAD
-    <div style={{
-      height: '100svh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
-    }}>
-=======
     <div>
->>>>>>> master
       <h2>Something went wrong!</h2>
       <button
         onClick={

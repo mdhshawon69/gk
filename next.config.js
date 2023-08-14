@@ -4,17 +4,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'stage.grameenkalyan.com'
-      }
+        hostname: 'stage.grameenkalyan.com',
+      },
     ],
     domains: ['stage.grameenkalyan.com'],
-    unoptimized: true
+    unoptimized: true,
   },
-  output: 'export',
+  distDir: 'build',
   env: {
     NEXT_PUBLIC_BASE_URL: 'http://api.grameenkalyan.com/api',
-    NEXT_PUBLIC_IMAGE_URL: 'https://admin.grameenkalyan.com/'
-  }
+    NEXT_PUBLIC_IMAGE_URL: 'https://admin.grameenkalyan.com/',
+  },
 };
 
 module.exports = nextConfig;

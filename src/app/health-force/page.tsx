@@ -10,9 +10,9 @@ import { filterDataByDepartment } from '@/shared/utils/pageHelpers/filterData.he
 const HealthForce = async () => {
   const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
 
-  const filterDoctorsData = filterDataByDepartment(corporate.data, 'Doctors');
-  const filterDMFsData = filterDataByDepartment(corporate.data, 'DMFs');
-  const filterCommunityHealthAssistantsData = filterDataByDepartment(corporate.data, 'Community Health Assistants');
+  const filterDoctorsData = filterDataByDepartment(corporate?.data, 'Doctors');
+  const filterDMFsData = filterDataByDepartment(corporate?.data, 'DMFs');
+  const filterCommunityHealthAssistantsData = filterDataByDepartment(corporate?.data, 'Community Health Assistants');
 
   return (
     <>

@@ -9,7 +9,7 @@ const GalleryPage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div>
-      <Gallery data={galleryPhotos.data}/>
+      <Gallery data={galleryPhotos?.data}/>
     </div>
   );
 };

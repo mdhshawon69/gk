@@ -24,11 +24,11 @@ const HeroSection = ({ data }: IHeroSectionProps) => {
 
     <div className={serviceDetail}>
       <div className={bgImageContainer}>
-        <Image className={bgImage} src={IMAGE_BASE_URL + data.image} alt='bg img' height={100} width={100} loader={() => IMAGE_BASE_URL + data.image}/>
+        <Image className={bgImage} src={IMAGE_BASE_URL + (data && data.image)} alt='bg img' height={100} width={100} loader={() => IMAGE_BASE_URL + (data && data.image)}/>
       </div>
       <h1 className={heading}>
-        <span>{data.title}</span>
-        <span>{data.SubTitle}</span>
+        <span>{data?.title}</span>
+        <span>{data?.SubTitle}</span>
       </h1>
     </div>
   );

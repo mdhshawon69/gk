@@ -3,7 +3,7 @@
 
 import { useFetch } from '@/shared/hook';
 
-export async function getDataByDivisionId(divisionId: number) {
+export async function getDataByDivisionId(divisionId: string | number) {
   const data = await useFetch({ url: `/get-health-centers?division_id=${divisionId}` });
 
   return data;

@@ -91,7 +91,7 @@ const Navbar = ({ badgeImage }: INavbarProps) => {
         <li className={dropdownItem}>
           <span className={itemText}>gallery <BiSolidDownArrow/></span>
           <ul className={dropdownList}>
-            <Link className={link} href='photo-gallery'>
+            <Link className={link} href='/photo-gallery'>
               <li className={`${subItem} ${subItemNoBorder}`}>photo album</li>
             </Link>
           </ul>

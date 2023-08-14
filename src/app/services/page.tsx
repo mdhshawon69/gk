@@ -11,7 +11,7 @@ const Services = async () => {
     <>
       <HeroSection titleOne='Serving Bottom of the' titleTwo='Pyramid with Utmost' titleThree='Care and Sincerity'/>
       <AreaWeServe/>
-      <ServiceSection servicesData={services.data}/>
+      <ServiceSection servicesData={services?.data}/>
     </>
   );
 };

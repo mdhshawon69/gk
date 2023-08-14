@@ -25,7 +25,7 @@ const HeroSection = ({ data }: IHeroSectionProps) => {
       <div className={bgImageContainer}>
         <Image className={bgImage} src={IMAGE_BASE_URL + (data && data.heroImage)} alt='bg img' height={100} width={100} loader={() => IMAGE_BASE_URL + (data && data.heroImage)}/>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: data && data.heroTitle }}></div>
+      <h1><span>{data?.heroTitle}</span></h1>
     </div>
   );
 };

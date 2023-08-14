@@ -40,7 +40,7 @@ const HealthcareService = ({ servicesData }: IHealthcareServiceProps) => {
       </div>
       <div className={gridContainer}>
         {
-          servicesData.map((data, index) => {
+          servicesData?.map((data, index) => {
             return (
               <>
                 <div key={data.id} className={healthcareServiceCard}>

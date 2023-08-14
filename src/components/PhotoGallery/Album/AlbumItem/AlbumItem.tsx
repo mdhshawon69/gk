@@ -21,7 +21,7 @@ const AlbumItem = ({ data }: IAlbumItemProps) => {
   return (
     <div className={albumItem}>
       <div className={imgContainer}>
-        <Image className={img} src={IMAGE_BASE_URL + data.album_photo} alt='album' width={100} height={100} loader={() => IMAGE_BASE_URL + data.album_photo}/>
+        <Image className={img} src={IMAGE_BASE_URL + data.album_photo} alt='album' width={1000} height={1000} loader={() => IMAGE_BASE_URL + data.album_photo}/>
       </div>
       <div className={textContainer}>
         <h4 className={title}>{data.title}</h4>

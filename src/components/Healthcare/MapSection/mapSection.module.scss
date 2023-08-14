@@ -46,32 +46,94 @@
 
         .mapContainer{
             svg{
-                .rangpur,
-                .rajshahi,
-                .khulna,
-                .chattogram,
-                .barisal,
-                .mymensingh,
-                .sylhet,
-                .dhaka{
-                    transition: all 500ms;
+                g{
+                    .barisal{
+                        g{
+                            path{
+                                fill: transparent;
+                                transition: all 250ms;
+                                cursor: pointer;
+                            }
 
-                    &:hover{
-                        fill: $color-primary;
+                            &:hover path{
+                                fill: $color-primary;
+                            }
+                        }
                     }
-                }
-                .chattogram{
-                    path{
+                    .chattogram{
+                        g{
+                            path{
+                                fill: transparent;
+                                transition: all 250ms;
+                                cursor: pointer;
+                            }
+
+                            &:hover path{
+                                fill: $color-primary;
+                            }
+
+                            .active{
+                                fill: $color-primary;
+                            }
+                        }
+                    }
+                    .khulna{
+                        fill: transparent;
                         transition: all 250ms;
-    
+                        cursor: pointer;
+
                         &:hover{
                             fill: $color-primary;
                         }
                     }
-                }
+                    .rangpur{
+                        fill: transparent;
+                        transition: all 250ms;
+                        cursor: pointer;
 
-                path{
-                    cursor: pointer;
+                        &:hover{
+                            fill: $color-primary;
+                        }
+                    }
+                    .rajshahi{
+                        fill: transparent;
+                        transition: all 250ms;
+                        cursor: pointer;
+
+                        &:hover{
+                            fill: $color-primary;
+                        }
+                    }
+                    .dhaka{
+                        fill: transparent;
+                        transition: all 250ms;
+                        cursor: pointer;
+
+                        &:hover{
+                            fill: $color-primary;
+                        }
+                    }
+                    .mymensingh{
+                        fill: transparent;
+                        transition: all 250ms;
+                        cursor: pointer;
+
+                        &:hover{
+                            fill: $color-primary;
+                        }
+                    }
+                    .sylhet{
+                        fill: transparent;
+                        transition: all 250ms;
+                        cursor: pointer;
+
+                        &:hover{
+                            fill: $color-primary;
+                        }
+                    }
+                    .active{
+                        fill: $color-primary;
+                    }
                 }
             }
         }

@@ -8,7 +8,7 @@ import { ICategory } from '@/shared/types/category';
 const Stories = async () => {
   const storyCategories = await useFetch({ url: '/story-categories', revalidateIn: 86400 });
 
-  const storyCategoriesData = storyCategories.data.map((data: ICategory) => ({
+  const storyCategoriesData = storyCategories?.data?.map((data: ICategory) => ({
     id: data.id, name: data.name, banner_image: data.banner_image, dataType: 'story'
   }));
 

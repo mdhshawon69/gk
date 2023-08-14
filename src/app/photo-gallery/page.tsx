@@ -8,7 +8,7 @@ const PhotoGallery = async () => {
 
   return (
     <div>
-      <Album albumsData={photoAlbums.data}/>
+      <Album albumsData={photoAlbums?.data}/>
     </div>
   );
 };

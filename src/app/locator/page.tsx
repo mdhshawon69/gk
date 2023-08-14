@@ -11,7 +11,7 @@ const LocatorPage = async () => {
   return (
     <>
       <Map />
-      <OfficeLocations officeLocationsData={locators.data} />
+      <OfficeLocations officeLocationsData={locators?.data} />
       <WorkTogether />
     </>
   );

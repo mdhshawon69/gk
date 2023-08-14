@@ -11,14 +11,18 @@ const Healthcare = async () => {
   const healthcareService = await useFetch({ url: '/healthcare-services' });
   const medicalCare = await useFetch({ url: '/disease-specific-medicare' });
 
+<<<<<<< HEAD
   const medicalCareCategoryData = medicalCare && medicalCare.data.map((data: IMedicalCare) => ({
+=======
+  const medicalCareCategoryData = medicalCare?.data?.map((data: IMedicalCare) => ({
+>>>>>>> master
     id: data.id, name: data.title, banner_image: data.thumb_image, dataType: 'medical'
   }));
 
   return (
     <>
       <HeroSection heroFor='healthcare'/>
-      <HealthcareService servicesData={healthcareService.data}/>
+      <HealthcareService servicesData={healthcareService?.data}/>
       <MapSection/>
       <MedicalCare/>
       <MedicalCareList medicalCareCategory={medicalCareCategoryData}/>

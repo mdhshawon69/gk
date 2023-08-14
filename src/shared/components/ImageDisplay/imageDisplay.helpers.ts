@@ -7,7 +7,7 @@ interface filterDataProps{
 }
 
 export const filterData = ({ data, from, to }: filterDataProps) => {
-  const dataFiltered = data.slice(from - 1, to);
+  const dataFiltered = data?.slice(from - 1, to);
 
   return dataFiltered;
 };

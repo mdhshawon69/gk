@@ -10,14 +10,14 @@ import { filterDataByDepartment } from '@/shared/utils/pageHelpers/filterData.he
 const Corporate = async () => {
   const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
 
-  const filterManagementData = filterDataByDepartment(corporate.data, 'Management');
-  const filterAccountAndFinanceData = filterDataByDepartment(corporate.data, 'Account & Finance');
-  const filterHumanResourceData = filterDataByDepartment(corporate.data, 'Human Resources & Administration');
-  const filterServicesAndProcurementData = filterDataByDepartment(corporate.data, 'Services & Procurement');
-  const filterAuditData = filterDataByDepartment(corporate.data, 'Audit & Internal Compliance');
-  const filterBrandingAndSecretariatData = filterDataByDepartment(corporate.data, 'Branding & Secretariat');
-  const filterTrainingData = filterDataByDepartment(corporate.data, 'Training');
-  const filterTechnologyData = filterDataByDepartment(corporate.data, 'Information Technology (IT)');
+  const filterManagementData = filterDataByDepartment(corporate?.data, 'Management');
+  const filterAccountAndFinanceData = filterDataByDepartment(corporate?.data, 'Account & Finance');
+  const filterHumanResourceData = filterDataByDepartment(corporate?.data, 'Human Resources & Administration');
+  const filterServicesAndProcurementData = filterDataByDepartment(corporate?.data, 'Services & Procurement');
+  const filterAuditData = filterDataByDepartment(corporate?.data, 'Audit & Internal Compliance');
+  const filterBrandingAndSecretariatData = filterDataByDepartment(corporate?.data, 'Branding & Secretariat');
+  const filterTrainingData = filterDataByDepartment(corporate?.data, 'Training');
+  const filterTechnologyData = filterDataByDepartment(corporate?.data, 'Information Technology (IT)');
 
   return (
     <>

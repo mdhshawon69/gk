@@ -32,9 +32,9 @@ const BoardMemberDetail = ({ data }: IBoarderMemberDetailProps) => {
           <Image className={image} src={IMAGE_BASE_URL + (data && data.profile_photo)} alt='member' width={100} height={100} loader={() => IMAGE_BASE_URL + (data && data.profile_photo)}/>
         </div>
         <div className={detailsContainer}>
-          <div className={description} dangerouslySetInnerHTML={{ __html: data && data.desc }}></div>
-          <h3 className={memberName}>{data && data.name}</h3>
-          <p className={designation}>{data && data.designation}</p>
+          <div className={description} dangerouslySetInnerHTML={{ __html: data?.desc }}></div>
+          <h3 className={memberName}>{data?.name}</h3>
+          <p className={designation}>{data?.designation}</p>
         </div>
       </div>
       <div className={btnContainer}>

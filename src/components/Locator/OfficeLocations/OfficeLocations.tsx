@@ -30,7 +30,7 @@ const OfficeLocations = ({ officeLocationsData }: IOfficeLocationsProps) => {
         <h2>Regional Office across Bangladesh</h2>
 
         <div className={locationContainer}>
-          {officeLocationsData.map((data, i) => (
+          {officeLocationsData?.map((data, i) => (
             <div
               className={`${locationCard} ${i % 2 === 0 ? cardOne : cardTwo}`}
               key={data.id}

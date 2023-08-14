@@ -35,7 +35,7 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
       <h2 className={heading}>Stories</h2>
       <div className={leftContent}>
         {
-          leftSideData.map(data => <div key={data.id} className={content} onMouseOver={ () => setSelectedImage(data.banner_image)}>
+          leftSideData?.map(data => <div key={data.id} className={content} onMouseOver={ () => setSelectedImage(data.banner_image)}>
             <Link className={link} href={data.dataType === 'medical' ? `/medical-care/${data.id}` : data.dataType === 'story' ? `/stories/${data.id}` : '#'}>
               <p>{data.name}</p>
             </Link>
@@ -54,7 +54,7 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
       </div>
       <div className={rightContent}>
         {
-          rightSideData.map(data => <div key={data.id} className={content} onMouseOver={() => setSelectedImage(data.banner_image)}>
+          rightSideData?.map(data => <div key={data.id} className={content} onMouseOver={() => setSelectedImage(data.banner_image)}>
             <Link className={link} href={data.dataType === 'medical' ? `/medical-care/${data.id}` : data.dataType === 'story' ? `/stories/${data.id}` : '#'}>
               <p>{data.name}</p>
             </Link>

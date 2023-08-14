@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -17,12 +19,12 @@ interface IAboutUsProps {
 }
 
 const AboutUs = ({ data }: IAboutUsProps) => {
-  const headingString = data.heading;
+  const headingString = data?.heading;
   const separator = '/'; // The separator between the two parts of the string
 
-  const partsArray = headingString.split(separator);
-  const headingFirstPart = partsArray[0];
-  const headingSecondPart = partsArray[1];
+  const partsArray = headingString?.split(separator);
+  const headingFirstPart = partsArray?.shift();
+  const headingSecondPart = partsArray?.pop();
 
   return (
     <div className={aboutUs}>
@@ -35,7 +37,7 @@ const AboutUs = ({ data }: IAboutUsProps) => {
       </h2>
       <div
         className={description}
-        dangerouslySetInnerHTML={{ __html: data.description }}
+        dangerouslySetInnerHTML={{ __html: data?.description }}
       ></div>
     </div>
   );

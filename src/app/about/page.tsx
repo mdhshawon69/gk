@@ -24,35 +24,35 @@ const About = async () => {
   const boardMemberData = await useFetch({ url: '/members', revalidateIn: 86400 });
   const serviceContent = await useFetch({ url: '/service-contents/home', revalidateIn: 86400 });
 
-  const mission = aboutUsData?.data[0].mission;
-  const vision = aboutUsData?.data[0].vision;
+  const mission = aboutUsData?.mission;
+  const vision = aboutUsData?.vision;
 
   const aboutSectionData = {
-    heading: aboutUsData.data[0].company_intro_title,
-    description: aboutUsData.data[0].company_intro_description
+    heading: aboutUsData?.company_intro_title,
+    description: aboutUsData?.company_intro_description
   };
 
-  const annuallyReportData = reverseFilterDataByKey(summeryReportData.data, 'annually_we_serve');
+  const annuallyReportData = reverseFilterDataByKey(summeryReportData?.data, 'annually_we_serve');
 
   const empoweringSectionData = {
-    title: aboutUsData.data[0].inception_title,
-    details: aboutUsData.data[0].inception_details
+    title: aboutUsData?.inception_title,
+    details: aboutUsData?.inception_details
   };
 
-  const aboutGrameenKalyanSectionData = aboutUsData.data[0].presence_details;
+  const aboutGrameenKalyanSectionData = aboutUsData?.presence_details;
 
   return (
     <>
       <HeroSection titleOne='With Joy' titleTwo='We Grow Together' titleThree='We Serve Together'/>
       <MissionVision mission={mission} vision={vision}/>
-      <ServiceSection serviceData={serviceContent.data}/>
+      <ServiceSection serviceData={serviceContent?.data}/>
       <AboutUs data={aboutSectionData}/>
       <AnnualReportSection data={annuallyReportData} headingTop={true} headingText='Story of Inception'/>
       <EmpoweringSection empoweringData={empoweringSectionData}/>
-      <OurProudSection proudPresenceData={ourProudPresenceData.data} headingText='Our Proud Presence' subHeadingText='Across the Country'/>
+      <OurProudSection proudPresenceData={ourProudPresenceData?.data} headingText='Our Proud Presence' subHeadingText='Across the Country'/>
       <AboutGrameenKalyan aboutGkData={aboutGrameenKalyanSectionData}/>
-      <AchievementSection achievementData={achievementData.data}/>
-      <BoardMemberSection boardMembersData={boardMemberData.data} />
+      <AchievementSection achievementData={achievementData?.data}/>
+      <BoardMemberSection boardMembersData={boardMemberData?.data} />
       <WorkTogether/>
     </>
   );

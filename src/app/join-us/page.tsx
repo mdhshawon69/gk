@@ -8,7 +8,7 @@ const JoinUs = async () => {
   const bgImage = 'https://res.cloudinary.com/dboyf6lad/image/upload/q_auto:good/v1690783090/joinus-bg_rst7hy.webp';
 
   const departmentsData = await useFetch({ url: '/departments' });
-  const departments = departmentsData.data;
+  const departments = departmentsData?.data;
 
   return (
     <>

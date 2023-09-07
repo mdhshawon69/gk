@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import testImage from '@/assets/images/lets-work.webp';
+import bgImage from '@/assets/images/lets-work.webp';
 import { Button } from '../Button';
 
 import style from './workTogether.module.scss';
@@ -17,7 +17,7 @@ const WorkTogether = () => {
   return (
     <div className={workTogether}>
       <div className={imgContainer}>
-        <Image className={img} src={testImage} alt='img'/>
+        <Image className={img} src={bgImage} alt='img'/>
       </div>
       <div className={contentContainer}>
         <motion.h3

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const bgImage = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692613875/proud-bg_bu0agc.jpg';
+import bgImage from '@/assets/images/common/proud-present.jpg';
 
 import style from './ourProudSection.module.scss';
 import { IOurProudSection } from './ourProudSection.type';
@@ -33,7 +33,7 @@ const OurProudSection = ({ proudPresenceData, headingText, subHeadingText }: IOu
       </h1>
       <div className={container}>
         <div className={bgContainer}>
-          <Image className={img} src={bgImage} alt='bg-img' width={1000} height={1000} loader={() => bgImage}/>
+          <Image className={img} src={bgImage} alt='bg-img' width={1000} height={1000}/>
         </div>
         <div className={contentContainer}>
           <div className={gridContainer}>

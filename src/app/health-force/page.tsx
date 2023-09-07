@@ -7,10 +7,10 @@ import {
 } from '@/shared/components';
 import { filterDataByDepartment } from '@/shared/utils/pageHelpers/filterData.helper';
 
-const bgHero = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692259177/IMG_1382_bhjrmk.jpg';
-const doctorsImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/our-doctors-full_p5yajx.jpg';
-const dmfsImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/dmfs-full_c7ihh5.jpg';
-const communityImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/assistants-full_b5gaak.jpg';
+import healthForceHero from '@/assets/images/healthForce/health-force-bg.jpg';
+import doctorsImg from '@/assets/images/healthForce/our-doctors-full.jpg';
+import dmfsImg from '@/assets/images/healthForce/dmfs-full.jpg';
+import communityImg from '@/assets/images/healthForce/assistants-full.jpg';
 
 const HealthForce = async () => {
   const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
@@ -21,7 +21,7 @@ const HealthForce = async () => {
 
   return (
     <>
-      <HeroSection titleOne='Serving Bottom of the' titleTwo='Pyramid with Utmost' titleThree='Care and Sincerity' backgroundImage={bgHero}/>
+      <HeroSection titleOne='Serving Bottom of the' titleTwo='Pyramid with Utmost' titleThree='Care and Sincerity' backgroundImage={healthForceHero}/>
       <AboutSection/>
       <TeamGroup headingTextTwo='Our Doctors' image={doctorsImg}/>
       <TeamGrid datas={filterDoctorsData}/>

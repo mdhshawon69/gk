@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const bgImage = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692613874/about-annual_u4175k.jpg';
+import bgImage from '@/assets/images/common/annual-report.jpg';
 
 import style from './annualSection.module.scss';
 import { IAnnualReportSection } from './annualReport.type';
@@ -32,7 +32,7 @@ const AnnualReportSection = ({ data, headingText, headingTop }: IAnnualReportSec
       <h1 className={headingTop ? `${heading} ${headingT}` : `${heading}`}>{headingText}</h1>
       <div className={container}>
         <div className={bgContainer}>
-          <Image className={img} src={bgImage} alt='bg-img' height={1000} width={1000} loader={() => bgImage}/>
+          <Image className={img} src={bgImage} alt='bg-img' height={1000} width={1000}/>
         </div>
         <div className={headingTop ? `${contentContainer} ${contentContainerT}` : `${contentContainer}`}>
           <div className={gridContainer}>

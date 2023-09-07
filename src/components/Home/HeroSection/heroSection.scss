@@ -1,11 +1,11 @@
 @import '../../../style/utils/base';
 
 .heroSection{
-    height: calc(100svh - 16rem);
+    height: calc(100svh - 15rem);
     position: relative;
     
     @include response(phone){
-        height: calc(100svh - 12rem);
+        height: calc(100svh - 11rem);
     }
 
     .bgImage{
@@ -39,10 +39,10 @@
         }
 
         .slick-track {
-            height: calc(100Svh - 16rem);
-          
+            height: calc(100svh - 15rem);
+            
             @include response(phone){
-              height: calc(100Svh - 12rem);
+                height: calc(100svh - 11rem);
             }
         }
         .slick-track .slick-slide > div{

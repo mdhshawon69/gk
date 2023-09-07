@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { motion } from 'framer-motion';
 
 import bgImg from '@/assets/images/about/about-bg.webp';
@@ -28,7 +28,7 @@ const {
 
 interface IHeroSectionProps {
    heroFor?: string
-   backgroundImage?: string
+   backgroundImage?: StaticImageData
    titleOne?: string
    titleTwo?: string
    titleThree?: string
@@ -37,15 +37,19 @@ interface IHeroSectionProps {
 const HeroSection = ({
   heroFor, backgroundImage, titleOne, titleTwo, titleThree
 }: IHeroSectionProps) => {
-  const isJoinUs = heroFor === 'join-us' || 'search';
+  const isJoinUs = heroFor === 'join-us';
+  const isSearch = heroFor === 'search';
   const isHealthcare = heroFor === 'healthcare';
   const isStory = heroFor === 'story';
 
-  if (isJoinUs) {
+  console.log('isHealthcare: ', isHealthcare);
+  console.log('isJoinUs: ', isJoinUs);
+
+  if (isJoinUs || isSearch) {
     return (
       <div className={heroSection}>
         <div className={bgImageContainer}>
-          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000} placeholder='blur' blurDataURL={`${backgroundImage}` || `${bgImg}`}/>
+          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000}/>
         </div>
         <div className={`${content} ${juContent}`}>
           <motion.h1
@@ -81,7 +85,7 @@ const HeroSection = ({
     return (
       <div className={heroSection}>
         <div className={bgImageContainer}>
-          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000} placeholder='blur' blurDataURL={`${backgroundImage}` || `${bgImg}`}/>
+          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000}/>
         </div>
         <div className={`${content} ${healthcareContent}`}>
           <motion.h1
@@ -117,7 +121,7 @@ const HeroSection = ({
     return (
       <div className={heroSection}>
         <div className={bgImageContainer}>
-          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000} placeholder='blur' blurDataURL={`${backgroundImage}` || `${bgImg}`}/>
+          <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={10000} height={10000}/>
         </div>
         <div className={`${content} ${storyContent}`}>
           <motion.h1
@@ -142,7 +146,7 @@ const HeroSection = ({
   return (
     <div className={heroSection}>
       <div className={bgImageContainer}>
-        <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={1000} height={1000} placeholder='blur' blurDataURL={`${backgroundImage}` || `${bgImg}`}/>
+        <Image className={bgImage} src={backgroundImage || bgImg} alt='bg img' width={1000} height={1000}/>
       </div>
       <div className={content}>
         <motion.h1

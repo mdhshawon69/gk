@@ -5,13 +5,13 @@
     overflow: hidden;
     padding: 6rem 20rem;
     position: relative;
-    height: calc(100svh - 16rem);
+    height: calc(100svh - 15rem);
 
     display: flex;
     align-items: flex-end;
     
     @include response(phone){
-        height: calc(100svh - 12rem);
+        height: calc(100svh - 11rem);
         border-radius: 20rem 0 0 0;
         padding: 4rem 10rem;
     }

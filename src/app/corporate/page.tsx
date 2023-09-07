@@ -6,6 +6,15 @@ import {
 import { PeopleCulture } from '@/components/Corporate';
 import { useFetch } from '@/shared/hook';
 import { filterDataByDepartment } from '@/shared/utils/pageHelpers/filterData.helper';
+import managementImg from '@/assets/images/corporate/management-leadership.jpg';
+import accountImg from '@/assets/images/corporate/account-finance.jpg';
+import hrImg from '@/assets/images/corporate/resource-full.jpg';
+import servicesImg from '@/assets/images/corporate/procurement.jpg';
+import auditImg from '@/assets/images/corporate/audit-internal.jpg';
+import brandingImg from '@/assets/images/corporate/brand-full.jpg';
+import trainingImg from '@/assets/images/corporate/training_section_banner.jpg';
+import itImg from '@/assets/images/corporate/information_technology.jpg';
+import corporateHero from '@/assets/images/common/corporate-hero.png';
 
 const Corporate = async () => {
   const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
@@ -19,19 +28,9 @@ const Corporate = async () => {
   const filterTrainingData = filterDataByDepartment(corporate?.data, 'Training');
   const filterTechnologyData = filterDataByDepartment(corporate?.data, 'Information Technology (IT)');
 
-  const bgHero = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1693472682/MicrosoftTeams-image_80_wmqvsd.png';
-  const managementImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608043/management-leadership-_1__cnt3vv.jpg';
-  const accountImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608043/account-finance_apn4ac.jpg';
-  const hrImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608044/resource-full_yrklg7.jpg';
-  const servicesImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608042/procurement_gocoxd.jpg';
-  const auditImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608042/audit-internal_bdrn5d.jpg';
-  const brandingImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608043/brand-full_rpfuxj.jpg';
-  const trainingImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608043/training_section_banner_mukpax.jpg';
-  const itImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692608043/information_technology_section_banner_t3wy0u.jpg';
-
   return (
     <>
-      <HeroSection titleOne='Serving Bottom of the' titleTwo='Pyramid with Utmost' titleThree='Care and Sincerity' backgroundImage={bgHero}/>
+      <HeroSection titleOne='Serving Bottom of the' titleTwo='Pyramid with Utmost' titleThree='Care and Sincerity' backgroundImage={corporateHero}/>
       <PeopleCulture/>
       <TeamGroup headingTextOne='Management' headingTextTwo='Leadership' image={managementImg}/>
       <TeamGrid datas={filterManagementData}/>

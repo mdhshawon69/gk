@@ -1,11 +1,11 @@
 @import '../../../style/utils/base';
 
 .heroSection{
+    height: calc(100svh - 15rem);
     position: relative;
-    height: calc(100svh - 16rem);
     
     @include response(phone){
-        height: calc(100svh - 12rem);        
+        height: calc(100svh - 11rem);
     }
 
     .bgImageContainer{

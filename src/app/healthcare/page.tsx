@@ -6,6 +6,7 @@ import {
 } from '@/components/Healthcare';
 import { useFetch } from '@/shared/hook';
 import { IMedicalCare } from '@/shared/types/medicalCare';
+import healthcareHero from '@/assets/images/common/healthcare-hero.png';
 
 const Healthcare = async () => {
   const healthcareService = await useFetch({ url: '/healthcare-services' });
@@ -15,11 +16,9 @@ const Healthcare = async () => {
     id: data.id, name: data.title, banner_image: data.thumb_image, dataType: 'medical'
   }));
 
-  const bgHero = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692259176/healthcare-bg_lgc2rn.png';
-
   return (
     <>
-      <HeroSection heroFor='healthcare' backgroundImage={bgHero}/>
+      <HeroSection heroFor='healthcare' backgroundImage={healthcareHero}/>
       <HealthcareService servicesData={healthcareService?.data}/>
       <MapSection/>
       <MedicalCare/>

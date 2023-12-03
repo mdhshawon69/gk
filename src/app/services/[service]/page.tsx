@@ -1,5 +1,4 @@
 import React from 'react';
-import nextBase64 from 'next-base64';
 
 import { useFetch } from '@/shared/hook';
 

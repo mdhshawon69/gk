@@ -8,7 +8,7 @@ import { useFetch } from '@/shared/hook';
 import { filterDataByDepartment } from '@/shared/utils/pageHelpers/filterData.helper';
 
 const Corporate = async () => {
-  const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
+  const corporate = await useFetch({ url: '/peoples' });
 
   const filterManagementData = filterDataByDepartment(corporate?.data, 'Management');
   const filterAccountAndFinanceData = filterDataByDepartment(corporate?.data, 'Account & Finance');

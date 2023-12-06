@@ -13,7 +13,7 @@ const dmfsImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/d
 const communityImg = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/assistants-full_b5gaak.jpg';
 
 const HealthForce = async () => {
-  const corporate = await useFetch({ url: '/peoples', revalidateIn: 86400 });
+  const corporate = await useFetch({ url: '/peoples' });
 
   const filterDoctorsData = filterDataByDepartment(corporate?.data, 'Doctors');
   const filterDMFsData = filterDataByDepartment(corporate?.data, 'DMFs');

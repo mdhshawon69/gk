@@ -7,7 +7,7 @@ import { useFetch } from '@/shared/hook';
 const bgHero = 'https://res.cloudinary.com/dboyf6lad/image/upload/v1692260067/IMG_9405_nw01ee.jpg';
 
 const Services = async () => {
-  const services = await useFetch({ url: '/service-contents/services', revalidateIn: 86400 });
+  const services = await useFetch({ url: '/service-contents/services'});
 
   return (
     <>

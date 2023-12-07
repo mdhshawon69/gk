@@ -17,11 +17,11 @@ import { reverseFilterDataByKey } from '@/shared/utils/pageHelpers/filterData.he
 
 const About = async () => {
   const aboutUsData = await useFetch({ url: '/about-us-contents' });
-  const summeryReportData = await useFetch({ url: '/summary-report-settings/basic', revalidateIn: 86400 });
-  const ourProudPresenceData = await useFetch({ url: '/summary-report-settings/healthcare', revalidateIn: 86400 });
-  const achievementData = await useFetch({ url: '/timeline', revalidateIn: 86400 });
-  const boardMemberData = await useFetch({ url: '/members', revalidateIn: 86400 });
-  const serviceContent = await useFetch({ url: '/service-contents/home', revalidateIn: 86400 });
+  const summeryReportData = await useFetch({ url: '/summary-report-settings/basic'});
+  const ourProudPresenceData = await useFetch({ url: '/summary-report-settings/healthcare'});
+  const achievementData = await useFetch({ url: '/timeline'});
+  const boardMemberData = await useFetch({ url: '/members'});
+  const serviceContent = await useFetch({ url: '/service-contents/home'});
 
   const mission = aboutUsData?.mission;
   const vision = aboutUsData?.vision;

@@ -10,7 +10,7 @@ const heroData = {
 };
 
 const Newsletter = async () => {
-  const newsletters = await useFetch({ url: '/newsletter', revalidateIn: 86400 });
+  const newsletters = await useFetch({ url: '/newsletter'});
 
   return (
     <>

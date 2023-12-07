@@ -18,11 +18,11 @@ import {
 } from '@/shared/components';
 
 const Home = async () => {
-  const homePageContentData = await useFetch({ url: '/home-contents', revalidateIn: 86400 });
-  const summeryReportData = await useFetch({ url: '/summary-report-settings/basic', revalidateIn: 86400 });
-  const sliderImages = await useFetch({ url: '/home-slider-content', revalidateIn: 86400 });
-  const storyCategory = await useFetch({ url: '/story-categories', revalidateIn: 86400 });
-  const serviceContent = await useFetch({ url: '/service-contents/home', revalidateIn: 86400 });
+  const homePageContentData = await useFetch({ url: '/home-contents'});
+  const summeryReportData = await useFetch({ url: '/summary-report-settings/basic'});
+  const sliderImages = await useFetch({ url: '/home-slider-content'});
+  const storyCategory = await useFetch({ url: '/story-categories'});
+  const serviceContent = await useFetch({ url: '/service-contents/home'});
 
   const heroSliderImages = sliderImages?.data;
   const badgeImage = homePageContentData?.badge_image;

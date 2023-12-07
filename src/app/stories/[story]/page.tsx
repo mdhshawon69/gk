@@ -9,7 +9,7 @@ const Story = async ({ params }: { params: { story: number } }) => {
   const id = parseInt(params.story.toString());
 
   const story = await useFetch({ url: `/stories?category_id=${id}` });
-  const stories = await useFetch({ url: '/stories', revalidateIn: 86400 });
+  const stories = await useFetch({ url: '/stories'});
   const storyCategory = await useFetch({ url: '/story-categories' });
 
   const heroSectionData = {

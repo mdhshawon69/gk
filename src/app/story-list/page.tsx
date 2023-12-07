@@ -10,7 +10,7 @@ const heroData = {
 };
 
 const StoryList = async () => {
-  const stories = await useFetch({ url: '/stories'});
+  const stories = await useFetch({ url: '/stories' });
   return (
     <>
       <HeroSection data={heroData}/>

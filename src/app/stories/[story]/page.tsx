@@ -9,27 +9,29 @@ const Story = async ({ params }: { params: { story: number } }) => {
   const id = parseInt(params.story.toString());
 
   const story = await useFetch({ url: `/stories?category_id=${id}` });
-  const stories = await useFetch({ url: '/stories'});
+  const stories = await useFetch({ url: '/stories' });
   const storyCategory = await useFetch({ url: '/story-categories' });
 
   const heroSectionData = {
     title: story?.title,
-    image: storyCategory?.data[id]?.banner_image
+    image: storyCategory?.data[id]?.banner_image,
   };
   const storyShortDetail = {
     id: id,
     title: story?.title,
     description: story?.desc,
-    image: story?.thumb_image
+    image: story?.thumb_image,
   };
-  const recentPostData = stories?.data?.slice((data: IStories) => data.id === id);
+  const recentPostData = stories?.data?.slice(
+    (data: IStories) => data.id === id
+  );
 
   return (
     <>
-      <HeroSection data={heroSectionData}/>
+      <HeroSection data={heroSectionData} />
       <StoryShortDetail data={storyShortDetail} />
-      <RecentPost data={recentPostData}/>
-      <WorkTogether/>
+      <RecentPost data={recentPostData} />
+      <WorkTogether />
     </>
   );
 };

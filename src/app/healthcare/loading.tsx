@@ -4,7 +4,7 @@ import { PreLoader } from '@/shared/components';
 export default function AboutLoading() {
   return (
     <>
-      <PreLoader/>
+      <PreLoader />
     </>
   );
 }

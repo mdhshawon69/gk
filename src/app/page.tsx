@@ -1,7 +1,10 @@
 import React from 'react';
 
 import { useFetch } from '@/shared/hook';
-import { filterDataByKey, reverseFilterDataByKey } from '@/shared/utils/pageHelpers/filterData.helper';
+import {
+  filterDataByKey,
+  reverseFilterDataByKey,
+} from '@/shared/utils/pageHelpers/filterData.helper';
 
 import {
   HeroSection,
@@ -10,19 +13,23 @@ import {
   AnnuallyServe,
   MicroHealthSection,
   StoriesSection,
-  SevenPrinciple
+  SevenPrinciple,
 } from '@/components/Home';
 
 import {
-  ServiceSection, WorkTogether, AnnualReportSection
+  ServiceSection,
+  WorkTogether,
+  AnnualReportSection,
 } from '@/shared/components';
 
 const Home = async () => {
-  const homePageContentData = await useFetch({ url: '/home-contents'});
-  const summeryReportData = await useFetch({ url: '/summary-report-settings/basic'});
-  const sliderImages = await useFetch({ url: '/home-slider-content'});
-  const storyCategory = await useFetch({ url: '/story-categories'});
-  const serviceContent = await useFetch({ url: '/service-contents/home'});
+  const homePageContentData = await useFetch({ url: '/home-contents' });
+  const summeryReportData = await useFetch({
+    url: '/summary-report-settings/basic',
+  });
+  const sliderImages = await useFetch({ url: '/home-slider-content' });
+  const storyCategory = await useFetch({ url: '/story-categories' });
+  const serviceContent = await useFetch({ url: '/service-contents/home' });
 
   const heroSliderImages = sliderImages?.data;
   const badgeImage = homePageContentData?.badge_image;
@@ -30,7 +37,7 @@ const Home = async () => {
   const aboutSectionData = {
     title: homePageContentData?.intro_title,
     subTitleOne: homePageContentData?.intro_sub_title_one,
-    subTitleTwo: homePageContentData?.intro_sub_title_two
+    subTitleTwo: homePageContentData?.intro_sub_title_two,
   };
 
   const boardMemberArray = [
@@ -40,7 +47,7 @@ const Home = async () => {
       description: homePageContentData?.chairman_speech,
       designation: homePageContentData?.chairman_designation,
       image: homePageContentData?.chairman_thumb_image,
-      reverse: false
+      reverse: false,
     },
     {
       id: 2,
@@ -48,27 +55,33 @@ const Home = async () => {
       description: homePageContentData?.md_speech,
       designation: homePageContentData?.md_designation,
       image: homePageContentData?.md_thumb_image,
-      reverse: true
-    }
+      reverse: true,
+    },
   ];
 
-  const annuallyWeServeData = filterDataByKey(summeryReportData?.data, 'annually_we_serve');
-  const annuallyReportData = reverseFilterDataByKey(summeryReportData?.data, 'annually_we_serve');
+  const annuallyWeServeData = filterDataByKey(
+    summeryReportData?.data,
+    'annually_we_serve'
+  );
+  const annuallyReportData = reverseFilterDataByKey(
+    summeryReportData?.data,
+    'annually_we_serve'
+  );
 
   const microHealthData = homePageContentData?.mhi_banner_image;
 
   return (
     <>
-      <HeroSection badgeImage={badgeImage} sliderImages={heroSliderImages}/>
-      <AboutSection data={aboutSectionData}/>
-      <ServiceSection serviceData={serviceContent.data}/>
-      <BoardMember memberData={boardMemberArray}/>
-      <AnnuallyServe data={annuallyWeServeData}/>
-      <AnnualReportSection data={annuallyReportData} headingText='Annual'/>
-      <MicroHealthSection image={microHealthData}/>
-      <SevenPrinciple/>
-      <StoriesSection storyCategory={storyCategory.data}/>
-      <WorkTogether/>
+      <HeroSection badgeImage={badgeImage} sliderImages={heroSliderImages} />
+      <AboutSection data={aboutSectionData} />
+      <ServiceSection serviceData={serviceContent.data} />
+      <BoardMember memberData={boardMemberArray} />
+      <AnnuallyServe data={annuallyWeServeData} />
+      <AnnualReportSection data={annuallyReportData} headingText="Annual" />
+      <MicroHealthSection image={microHealthData} />
+      <SevenPrinciple />
+      <StoriesSection storyCategory={storyCategory.data} />
+      <WorkTogether />
     </>
   );
 };

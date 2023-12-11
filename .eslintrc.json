@@ -17,8 +17,6 @@
     "max-len": "off",
     "react/no-unescaped-entities": "off",
     "no-useless-escape": "off",
-    "radix": "off",
-    "object-curly-spacing": ["error", "off"],
-    "quotes": ["error"]
+    "radix": "off"
   }
 }

@@ -6,7 +6,7 @@ import { WorkTogether } from '@/shared/components';
 import { useFetch } from '@/shared/hook';
 
 const LocatorPage = async () => {
-  const locators = await useFetch({ url: '/locators'});
+  const locators = await useFetch({ url: '/locators' });
 
   return (
     <>

@@ -17,6 +17,8 @@
     "max-len": "off",
     "react/no-unescaped-entities": "off",
     "no-useless-escape": "off",
-    "radix": "off"
+    "radix": "off",
+    "comma-dangle": ["error", "never"],
+    "operator-linebreak": ["error", "never"]
   }
 }

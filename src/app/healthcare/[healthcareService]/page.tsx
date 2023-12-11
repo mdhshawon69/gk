@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import React from 'react';
 
 import { useFetch } from '@/shared/hook';

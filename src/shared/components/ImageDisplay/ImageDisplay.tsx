@@ -39,7 +39,9 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
 
   const handleFirstImage = () =>
     data &&
-    data.map((item, index) => index === 0 && setFirstImage(item?.banner_image));
+    data?.map(
+      (item, index) => index === 0 && setFirstImage(item?.banner_image)
+    );
   const handleOnMouseHover = (imgUrl: string) => {
     setActiveFirstImage(false);
     setSelectedImage(imgUrl);

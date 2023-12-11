@@ -18,9 +18,6 @@
     "react/no-unescaped-entities": "off",
     "no-useless-escape": "off",
     "radix": "off",
-    "comma-dangle": "off",
-    "operator-linebreak": "off",
-    "spaced-comment": "off",
     "object-curly-spacing": "off"
   }
 }

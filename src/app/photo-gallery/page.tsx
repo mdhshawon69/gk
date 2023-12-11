@@ -4,11 +4,12 @@ import { useFetch } from '@/shared/hook';
 import Album from '@/components/PhotoGallery/Album/Album';
 
 const PhotoGallery = async () => {
-  const photoAlbums = await useFetch({ url: '/photo-albums'});
+  //Fetching album data
+  const photoAlbums = await useFetch({ url: '/photo-albums' });
 
   return (
     <div>
-      <Album albumsData={photoAlbums?.data}/>
+      <Album albumsData={photoAlbums?.data} />
     </div>
   );
 };

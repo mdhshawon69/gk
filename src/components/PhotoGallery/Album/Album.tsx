@@ -8,12 +8,17 @@ import style from './album.module.scss';
 const { albumContainer, albumGrid, link } = style;
 
 const Album = ({ albumsData }: IAlbumsProps) => {
+  console.log(albumsData);
   return (
     <div className={albumContainer}>
       <div className={albumGrid}>
         {albumsData.map((albumData) => (
-          <Link className={link} key={albumData.id} href={`/photo-gallery/${albumData.id}`}>
-            <AlbumItem data={albumData}/>
+          <Link
+            className={link}
+            key={albumData.id}
+            href={`/photo-gallery/${albumData.id}`}
+          >
+            <AlbumItem data={albumData} />
           </Link>
         ))}
       </div>

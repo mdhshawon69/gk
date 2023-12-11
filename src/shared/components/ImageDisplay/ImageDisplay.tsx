@@ -34,9 +34,8 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
 
   // const leftSideData = filterData({ data, from: 1, to: 3 });
   // const rightSideData = filterData({ data, from: 4, to: 6 });
-  const leftSideData = data?.slice(0, 3);
-  const rightSideData = data?.slice(3, 6);
-  const [firstData] = rightSideData;
+  // eslint-disable-next-line no-unsafe-optional-chaining
+  const [firstData] = data?.slice(3, 6);
 
   const handleFirstImage = () =>
     data &&
@@ -61,7 +60,7 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
     >
       {!primary && <h2 className={heading}>Stories</h2>}
       <div className={leftContent}>
-        {leftSideData?.map((data) => (
+        {data?.slice(0, 3)?.map((data) => (
           <div
             key={data.id}
             className={content}
@@ -113,7 +112,7 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
         }
       </div>
       <div className={rightContent}>
-        {rightSideData?.map((data) => (
+        {data?.slice(3, 6)?.map((data) => (
           <div
             key={data.id}
             className={content}

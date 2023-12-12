@@ -35,7 +35,7 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
   // const leftSideData = filterData({ data, from: 1, to: 3 });
   // const rightSideData = filterData({ data, from: 4, to: 6 });
   // eslint-disable-next-line no-unsafe-optional-chaining
-  const [firstData] = data?.slice(3, 6);
+  // const [firstData] = data?.slice(3, 6);
 
   const handleFirstImage = () =>
     data &&
@@ -148,9 +148,9 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
           <Link
             className={link}
             href={
-              firstData.dataType === 'medical'
+              data?.[0]?.dataType === 'medical'
                 ? '/medical-care-list'
-                : firstData.dataType === 'story'
+                : data?.[0]?.dataType === 'story'
                 ? '/story-list'
                 : '#'
             }

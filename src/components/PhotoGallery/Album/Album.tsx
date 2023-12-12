@@ -8,7 +8,6 @@ import style from './album.module.scss';
 const { albumContainer, albumGrid, link } = style;
 
 const Album = ({ albumsData }: IAlbumsProps) => {
-  console.log(albumsData);
   return (
     <div className={albumContainer}>
       <div className={albumGrid}>

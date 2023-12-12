@@ -32,10 +32,10 @@ const ImageDisplay = ({ data, primary }: IImageDisplayProps) => {
   const [firstImage, setFirstImage] = useState<string>('');
   const [activeFirstImage, setActiveFirstImage] = useState(false);
 
+
   // const leftSideData = filterData({ data, from: 1, to: 3 });
   // const rightSideData = filterData({ data, from: 4, to: 6 });
   // eslint-disable-next-line no-unsafe-optional-chaining
-  // const [firstData] = data?.slice(3, 6);
 
   const handleFirstImage = () =>
     data &&

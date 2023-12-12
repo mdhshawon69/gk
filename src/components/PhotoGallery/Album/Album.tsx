@@ -11,7 +11,7 @@ const Album = ({ albumsData }: IAlbumsProps) => {
   return (
     <div className={albumContainer}>
       <div className={albumGrid}>
-        {albumsData.map((albumData) => (
+        {albumsData?.map((albumData) => (
           <Link
             className={link}
             key={albumData.id}

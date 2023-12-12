@@ -22,6 +22,7 @@
     "operator-linebreak": "off",
     "spaced-comment": "off",
     "object-curly-spacing": "off",
-    "padded-blocks": "off"
+    "padded-blocks": "off",
+    "no-multiple-empty-lines": "off"
   }
 }

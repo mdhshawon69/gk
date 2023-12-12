@@ -5,12 +5,13 @@ import { useFetch } from '@/shared/hook';
 
 const GalleryPage = async ({ params }: { params: { id: number } }) => {
   const id = parseInt(params.id.toString());
-  const galleryPhotos = await useFetch({ url: `/photo-galleries?category_id=${id}`  });
-  console.log(galleryPhotos)
+  const galleryPhotos = await useFetch({
+    url: `/photo-galleries?category_id=${id}`,
+  });
 
   return (
     <div>
-      <Gallery data={galleryPhotos?.data}/>
+      <Gallery data={galleryPhotos?.data} />
     </div>
   );
 };

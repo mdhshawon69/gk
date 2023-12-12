@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable camelcase */
 
 'use client';
@@ -9,20 +10,24 @@ import style from './albumItem.module.scss';
 import { IMAGE_BASE_URL } from '@/config';
 import { IPhotoAlbums } from '@/shared/types/photoAlbums';
 
-const {
-  albumItem, textContainer, imgContainer, img, title
-} = style;
+const { albumItem, textContainer, imgContainer, img, title } = style;
 
-interface IAlbumItemProps{
-  data: IPhotoAlbums
+interface IAlbumItemProps {
+  data: IPhotoAlbums;
 }
 
 const AlbumItem = ({ data }: IAlbumItemProps) => {
-  console.log(data)
   return (
     <div className={albumItem}>
       <div className={imgContainer}>
-        <Image className={img} src={IMAGE_BASE_URL + data.album_photo} alt='album' width={1000} height={1000} priority/>
+        <Image
+          className={img}
+          src={IMAGE_BASE_URL + data.album_photo}
+          alt="album"
+          width={1000}
+          height={1000}
+          priority
+        />
       </div>
       <div className={textContainer}>
         <h4 className={title}>{data.title}</h4>

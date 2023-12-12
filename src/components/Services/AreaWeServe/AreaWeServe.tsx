@@ -64,7 +64,7 @@ const AreaWeServe = () => {
             </div>
           </div>
         </Link>
-        <Link href='/services#wellbeing'>
+        <Link href='/services#well-being'>
           <div className={areaWellBeing}>
             <h3 className={heading}>Well-Being</h3>
             <div className={iconContainer}>
@@ -72,7 +72,7 @@ const AreaWeServe = () => {
             </div>
           </div>
         </Link>
-        <Link href='/services#emergency'>
+        <Link href='/services#emergency-response'>
           <div className={areaEmergencyResponse}>
             <h3 className={heading}>
               <span>Emergency</span>
@@ -83,7 +83,7 @@ const AreaWeServe = () => {
             </div>
           </div>
         </Link>
-        <Link href='/services#social'>
+        <Link href='/services#social-business'>
           <div className={areaSocialBusiness}>
             <h3 className={heading}>
               <span>Social</span>

@@ -18,6 +18,7 @@ interface IAlbumItemProps{
 }
 
 const AlbumItem = ({ data }: IAlbumItemProps) => {
+  console.log(data)
   return (
     <div className={albumItem}>
       <div className={imgContainer}>

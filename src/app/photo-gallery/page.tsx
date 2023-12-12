@@ -7,7 +7,6 @@ import Album from '@/components/PhotoGallery/Album/Album';
 
 const PhotoGallery = async () => {
   const photoAlbums = await useFetch({ url: '/photo-albums' });
-  console.log(photoAlbums);
 
   return (
     <div>

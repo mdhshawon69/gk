@@ -4,7 +4,7 @@ import { IUseFetchProps } from './useFetch.type';
 
 export default async function useFetch({ url, revalidateIn }: IUseFetchProps) {
   try {
-    const res = await fetch(BASE_URL + url, { next: { revalidate: revalidateIn || 60 } });
+    const res = await fetch(BASE_URL + url, { next: { revalidate: revalidateIn || 60 }, cache: 'no-cache' });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');

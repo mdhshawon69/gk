@@ -2,12 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   optimizeFonts: true,
+  distDir: 'build',
   images: {
-    domains: ['admin.grameenkalyan.com', 'res.cloudinary.com']
+    domains: ['admin.grameenkalyan.com', 'res.cloudinary.com'],
   },
   experimental: {
-    appDir: true
-  }
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

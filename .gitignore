@@ -32,6 +32,7 @@ yarn-error.log*
 .next
 .idea/*
 !.idea/rcb-settings.xml
+build
 
 # typescript
 *.tsbuildinfo

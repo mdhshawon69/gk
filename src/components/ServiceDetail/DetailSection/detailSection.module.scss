@@ -1,19 +1,27 @@
 @import '../../../style/utils/base';
 
-.detailSection{
-    padding: 10rem 20rem;
-    
-    .contentContainer{
-        h1{
-            font-size: 5rem;
-        }
-        p{
-            font-size: 2rem;
+.detailSection {
+  padding: 10rem 20rem;
 
-            margin-bottom: 2rem;
-        }
+  @media screen and (max-width: 600px) {
+    padding: 10rem 5rem;
+  }
+
+  table {
+    width: 100% !important;
+  }
+
+  .contentContainer {
+    h1 {
+      font-size: 5rem;
     }
-    .btnContainer{
-        padding: 10rem 0;
+    p {
+      font-size: 2rem;
+
+      margin-bottom: 2rem;
     }
+  }
+  .btnContainer {
+    padding: 10rem 0;
+  }
 }

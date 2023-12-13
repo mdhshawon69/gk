@@ -27,6 +27,7 @@ const Gallery = ({ data }: IGalleryProps) => {
     getAlbumTitle();
   }, [albumTitle]);
 
+
   return (
     <PhotoProvider>
       <div className={galleryContainer}>

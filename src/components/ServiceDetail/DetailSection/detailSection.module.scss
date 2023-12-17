@@ -3,8 +3,17 @@
 .detailSection {
   padding: 10rem 20rem;
 
-  @media screen and (max-width: 600px) {
-    padding: 10rem 5rem;
+  @include response(M-desktop) {
+    padding: 10rem 15rem;
+  }
+  @include response(tab-port) {
+    padding: 10rem 10rem;
+  }
+  @include response(phone) {
+    padding: 5rem;
+  }
+  @include response(s-phone) {
+    padding: 5rem 3rem;
   }
 
   table {

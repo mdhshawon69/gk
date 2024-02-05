@@ -1,6 +1,10 @@
+/* eslint-disable indent */
+/* eslint-disable no-unused-expressions */
 /* eslint-disable comma-dangle */
 
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,6 +12,7 @@ import layoutImg from '@/assets/layout/layout-tr-small.svg';
 import arrowIcon from '@/assets/icons/arrow-left.svg';
 
 import style from './map.module.scss';
+import { useRouter } from 'next/navigation';
 
 const {
   heroSection,
@@ -24,6 +29,7 @@ const {
 } = style;
 
 const Map = () => {
+  const router = useRouter();
   return (
     <div className={heroSection}>
       <div className={bgImageContainer}>
@@ -46,9 +52,10 @@ const Map = () => {
         </div>
 
         <div className={taglineFooter}>
-          <Link href="#">
-            <Image src={arrowIcon} alt="" />See our regional locations on the map
-          </Link>
+          <button onClick={() => router.push('/healthcare#healthcareMap')}>
+            <Image src={arrowIcon} alt="" />
+            See our regional locations on the map
+          </button>
         </div>
       </div>
     </div>

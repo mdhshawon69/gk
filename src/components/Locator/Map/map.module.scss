@@ -29,27 +29,27 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 1;        
-    
+    z-index: 1;
+
     background-color: $color-secondary;
     border-radius: 35rem 0 0 0;
     overflow: hidden;
     padding: 10rem 21rem 5rem 21rem;
-    
-    @include response(M-desktop){
-        padding: 10rem 19rem 5rem 19rem;
+
+    @include response(M-desktop) {
+      padding: 10rem 19rem 5rem 19rem;
     }
-    @include response(phone){
-        width: 100%;
-        border-radius: 25rem 0 0 0;
-        padding: 10rem 5rem 5rem 5rem;
-        position: relative;
-        border-radius: 15rem 0 0 0;
-      }
-    @include response(s-phone){
+    @include response(phone) {
+      width: 100%;
+      border-radius: 25rem 0 0 0;
+      padding: 10rem 5rem 5rem 5rem;
+      position: relative;
+      border-radius: 15rem 0 0 0;
+    }
+    @include response(s-phone) {
       padding: 10rem 3rem 5rem 3rem;
     }
-    
+
     .contentContainer {
       width: 100%;
       margin-bottom: 5rem;
@@ -145,7 +145,7 @@
 }
 
 .taglineFooter {
-  a {
+  button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -154,6 +154,9 @@
     color: #0b612d;
     text-decoration: none;
     font-weight: 900;
+    background: none;
+    border: none;
+    cursor: pointer;
 
     img {
       width: 5rem;

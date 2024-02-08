@@ -40,11 +40,11 @@ const Map = () => {
         <div className={contentContainer}>
           <div className={contentLeft}>
             <h4>Head Office</h4> <h5>Sunday - Thursday</h5>
-            <span>10:00 AM - 6:00 PM</span>
+            <span>10:00 AM - 05:00 PM</span>
           </div>
           <div className={contentRight}>
             <h4>Regional Office And Health Centers</h4>
-            <h5>Sunday - Thursday</h5> <span>10:00 AM - 6:00 PM</span>
+            <h5>Sunday - Thursday</h5> <span>09:00 AM - 5:00 PM</span>
           </div>
         </div>
         <div className={layoutContainer}>

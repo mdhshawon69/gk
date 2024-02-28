@@ -20,10 +20,16 @@ const dmfsImg =
   'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/dmfs-full_c7ihh5.jpg';
 const communityImg =
   'https://res.cloudinary.com/dboyf6lad/image/upload/v1692609361/assistants-full_b5gaak.jpg';
+const regionalManagersImg =
+  'https://res.cloudinary.com/dd1yxy9yy/image/upload/v1709014836/alternative_of_RM_group_photo_fnq48m.jpg';
 
 const HealthForce = async () => {
   const corporate = await useFetch({ url: '/peoples' });
 
+  const filterRegionalManagersData = filterDataByDepartment(
+    corporate?.data,
+    'Regional Manager'
+  );
   const filterDoctorsData = filterDataByDepartment(corporate?.data, 'Doctors');
   const filterDMFsData = filterDataByDepartment(corporate?.data, 'DMFs');
   const filterCommunityHealthAssistantsData = filterDataByDepartment(
@@ -40,6 +46,12 @@ const HealthForce = async () => {
         backgroundImage={bgHero}
       />
       <AboutSection />
+      <TeamGroup
+        headingTextOne="Our Regional"
+        headingTextTwo="Managers"
+        image={regionalManagersImg}
+      />
+      <TeamGrid datas={filterRegionalManagersData} />
       <TeamGroup headingTextTwo="Our Doctors" image={doctorsImg} />
       <TeamGrid datas={filterDoctorsData} />
       <TeamGroup headingTextTwo="Our DMFs" marginTop image={dmfsImg} />

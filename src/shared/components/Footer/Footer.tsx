@@ -4,7 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
 } from 'react-icons/fa6';
 
 import gkLogo from '@/assets/logo/gk-logo.svg';
@@ -28,14 +31,14 @@ const {
   container,
   link,
   copywrite,
-  icon
+  icon,
 } = style;
 
 const Footer = () => {
   return (
     <div className={footer}>
       <div className={logoContainer}>
-        <Image className={logo} src={gkLogo} alt='logo'/>
+        <Image className={logo} src={gkLogo} alt="logo" />
       </div>
       <div className={contentContainer}>
         <div className={address}>
@@ -44,13 +47,13 @@ const Footer = () => {
           </div>
           <div className={addressData}>
             <p>
-                5th Floor,
+              5th Floor,
               <br />
-                Grameen Telecom Bhaban,
+              Grameen Telecom Bhaban,
               <br />
-                53/1 Box Nagar, Mirpur 1,
+              53/1 Box Nagar, Mirpur 1,
               <br />
-                Dhaka 1216, Bangladesh
+              Dhaka 1216, Bangladesh
             </p>
           </div>
         </div>
@@ -74,12 +77,42 @@ const Footer = () => {
         </div>
         <div className={socialmedia}>
           <div className={container}>
-            <Link className={link} href={'#'}><FaFacebookF className={icon}/></Link>
-            <Link className={link} href={'#'}><FaInstagram className={icon}/></Link>
-            <Link className={link} href={'#'}><FaTwitter className={icon}/></Link>
-            <Link className={link} href={'#'}><FaLinkedinIn className={icon}/></Link>
+            <Link
+              className={link}
+              href={'https://www.facebook.com/grameenkalyan/'}
+              target="_blank"
+            >
+              <FaFacebookF className={icon} />
+            </Link>
+            <Link
+              className={link}
+              href={
+                'https://www.instagram.com/explore/locations/118227903152262/grameen-kalyan/'
+              }
+              target="_blank"
+            >
+              <FaInstagram className={icon} />
+            </Link>
+            <Link
+              className={link}
+              href={'https://twitter.com/GrameenKalyan'}
+              target="_blank"
+            >
+              <FaTwitter className={icon} />
+            </Link>
+            <Link
+              className={link}
+              href={
+                'https://www.linkedin.com/company/grameenkalyan/?originalSubdomain=bd'
+              }
+              target="_blank"
+            >
+              <FaLinkedinIn className={icon} />
+            </Link>
           </div>
-          <p className={copywrite}>Copyright © 2023 Grameen Kalyan. All Rights Reserved</p>
+          <p className={copywrite}>
+            Copyright © 2023 Grameen Kalyan. All Rights Reserved
+          </p>
         </div>
       </div>
     </div>

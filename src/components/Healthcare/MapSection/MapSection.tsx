@@ -104,10 +104,6 @@ const MapSection = () => {
     loadDivisionData(divisionId);
   }, [divisionId]);
 
-  const mapRef = useRef<any>(null);
-
-  mapRef?.current?.scrollIntoView();
-
   const firstData = data && data[0];
   const centerImage = firstData?.banner_image;
   const centerName = firstData?.name;
@@ -115,7 +111,7 @@ const MapSection = () => {
   const centerPhone = firstData?.contact_info;
 
   return (
-    <div className={mapSection} ref={mapRef}>
+    <div className={mapSection} id="healthcareMap">
       <h2 className={heading}>Our Health Centers</h2>
       <div className={contentContainer}>
         <div className={mapContainer}>

@@ -15,20 +15,28 @@
     text-align: center;
     color: $color-primary;
     opacity: 0.3;
-
-    position: relative;
+    margin-bottom: 10rem;
     z-index: 1;
-    top: -22rem;
 
-    @include response(vp-800) {
-      top: -20rem;
-    }
     @include response(phone) {
-      top: -18rem;
+      margin-bottom: 5rem;
     }
     @include response(s-phone) {
-      top: -11rem;
+      margin-bottom: 5rem;
     }
+
+    // position: relative;
+    // top: -22rem;
+
+    // @include response(vp-800) {
+    //   top: -20rem;
+    // }
+    // @include response(phone) {
+    //   top: -18rem;
+    // }
+    // @include response(s-phone) {
+    //   top: -11rem;
+    // }
 
     span {
       display: block;
